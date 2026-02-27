@@ -6,11 +6,11 @@ import com.example.apipracticeapp.presentation.state.PostUiState
 import com.example.apipracticeapp.presentation.viewmodel.PostViewModel
 import io.mockk.coEvery
 import io.mockk.mockk
+import junit.framework.TestCase.assertTrue
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.*
 import org.junit.Rule
 import org.junit.Test
-import kotlin.test.assertTrue
 
 @ExperimentalCoroutinesApi
 class PostViewModelTest {
@@ -23,7 +23,7 @@ class PostViewModelTest {
     @Test
     fun `should emit Success state`() = runTest {
 
-        val fakePosts = listOf(Post(1, "Title", "Body"))
+        val fakePosts = listOf(Post(1,1, "Title", "Body"))
 
         coEvery { useCase.invoke() } returns fakePosts
 

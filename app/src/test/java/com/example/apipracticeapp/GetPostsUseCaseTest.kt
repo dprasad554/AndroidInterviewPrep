@@ -1,6 +1,7 @@
 package com.example.apipracticeapp
 
 import com.example.apipracticeapp.domain.usecase.GetPostsUseCase
+import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
